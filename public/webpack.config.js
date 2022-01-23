@@ -11,42 +11,28 @@ module.exports = {
     index: "./src/js/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "",
+    path: path.resolve(__dirname, "assets"),
     filename: "js/[name].min.js",
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        test: /\.js/,
+        loader: "babel-loader",
+        include: __dirname + "/src",
+        exclude: /node_modules/,
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "postcss-loader",
-          },
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: "css-loader" },
+          { loader: "resolve-url-loader" },
           {
             loader: "sass-loader",
             options: {
               implementation: require("sass"),
             },
-          },
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
           },
         ],
       },

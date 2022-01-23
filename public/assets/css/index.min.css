@@ -1,0 +1,58 @@
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/sass/index.scss ***!
+  \*************************************************************************************************************************************************************************************/
+.header {
+  background: #4b409e;
+  box-shadow: 0 10px 20px #e0e0e1;
+  height: 46px;
+}
+
+.title {
+  color: #fff;
+  padding: 8px 38px 0 0;
+}
+
+.container {
+  max-width: 100% !important;
+}
+
+.debt, .own {
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0px 55px rgba(120, 112, 112, 0.58);
+  backdrop-filter: blur(1px);
+  height: 500px;
+  margin: 32px 10px;
+  border-radius: 6px;
+  position: relative !important;
+  justify-content: space-evenly;
+}
+
+h6 {
+  padding-top: 12px;
+}
+
+.sidebar {
+  width: 165px;
+  height: 100%;
+  box-shadow: 0px 0px 32px rgba(136, 152, 170, 0.15);
+  background-color: #fff;
+  z-index: 50;
+  top: 65px;
+  border-radius: 20px;
+}
+.sidebar .sidebar-content {
+  width: 283px;
+}
+
+.main {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.dropdown .dropdown-toggle {
+  color: #fff;
+}
+.dropdown .dropdown-toggle::after {
+  display: none;
+}
