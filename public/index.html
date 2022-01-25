@@ -43,43 +43,59 @@
       </div>
       <div class="main d-flex">
         <div class="col-6">
-          <div class="custom-card debt">
+          <div class="custom-card debtor">
             <h6>بدهکاری</h6>
             <i class="bi bi-plus-lg add-debtor"></i>
+            <div class="row" id="debtCard"></div>
           </div>
         </div>
         <div class="col-6">
           <div class="custom-card creditor">
             <h6>بستانکاری</h6>
             <i class="bi bi-plus-lg add-creditor"></i>
+            <div class="row" id="creditCard"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <div id="debtModal" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <span class="close">&times;</span>
+          <div class="col-8 mt-24">
+            <input
+              type="text"
+              class="form-control"
+              id="debtorName"
+              placeholder="نام بدهکار..."
+            />
           </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
+          <div class="col-4 mt-24">
+            <input type="number" class="form-control" id="debtorPrice" placeholder="قیمت به تومان" />
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="col-12">
+            <button type="button" id="saveDebt" class="save-debt btn">ثبت</button> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="creditModal" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <span class="close">&times;</span>
+          <div class="col-8 mt-24">
+            <input
+              type="text"
+              class="form-control"
+              id="creditorName"
+              placeholder="نام بستانکار..."
+            />
+          </div>
+          <div class="col-4 mt-24">
+            <input type="number" class="form-control" id="creditorPrice" placeholder="قیمت به تومان" />
+          </div>
+          <div class="col-12">
+            <button type="button" id="saveCredit" class="save-credit btn">ثبت</button> 
           </div>
         </div>
       </div>
